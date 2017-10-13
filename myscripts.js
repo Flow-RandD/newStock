@@ -85,7 +85,7 @@
             alert("Stock Record Created!");
             $('input[name="unitOfMeasure"]:checked').prop('checked',false);
             $('input[type="text"], textarea').val('');
-             $('input[name="qty"], textarea').val('');
+            $('input[name="qty"], textarea').val('');
               $('html,body').animate({
                   scrollTop: 0,
                   scrollLeft: 0
