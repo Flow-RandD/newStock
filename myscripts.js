@@ -85,7 +85,7 @@
             alert("Stock Record Created!");
             $('input[name="unitOfMeasure"]:checked').prop('checked',false);
             $('input[type="text"], textarea').val('');
-            $('input[type="number"], textarea').val('');
+             $('input[name="qty"], textarea').val('');
               $('html,body').animate({
                   scrollTop: 0,
                   scrollLeft: 0
@@ -101,5 +101,5 @@
     function uncheckAll(){
         $('input[name="unitOfMeasure"]:checked').prop('checked',false);
         $('input[type="text"], textarea').val('');
-        $('input[type="number"], textarea').val('');
+        $('input[name="qty"], textarea').val('');
     }
