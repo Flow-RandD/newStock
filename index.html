@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html>
 	<head>
-
 	  	<meta name="mobile-web-app-capable" content="yes">
 	  	<meta name="apple-mobile-web-app-capable" content="yes">
 	  	<meta name="application-name" content="calUP">
-	  	<meta name="apple-mobile-web-app-title" content="newStock">
+	  	<meta name="apple-mobile-web-app-title" content="sorUP">
 	  	<meta name="theme-color" content="#b3ffff">
 	  	<meta name="msapplication-navbutton-color" content="#ffff00">
 	  	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -26,7 +25,7 @@
 
   <body>
   <!--bodyInner-->  
-  <header><marquee><h3>Stock Take</h3></marquee></header>
+  <header><marquee><h3>New Stock</h3></marquee></header>
     <div id="div1">
 	    <h5>Please complete the form</h5>
 	      <form class="scroll" name="formA">
@@ -41,6 +40,8 @@
 	            	<input type="radio" id="unitOfMeasure" name="unitOfMeasure" value="metre">Metre<br>
 	            	<input type="radio" id="unitOfMeasure" name="unitOfMeasure" value="each">Each<br><br>
 	          </div>
+			  <label id="boxQtyLB">Box Qauntity:</label><br>
+	          	<input type="text" id="boxQty" name="boxQty" placeholder="250.." style="width:50%" autocomplete="off"><br><br>
 	          <label id="notesLB">Notes:</label><br>
 	          	<input type="text" id="notes" name="notes" placeholder="Notes, if needed.." style="width:50%" autocomplete="off"><br><br>
 	      </form>
@@ -59,4 +60,4 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<script src="myscripts.js"></script>
+    <script src="myscripts.js"></script>
