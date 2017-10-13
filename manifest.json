@@ -1,6 +1,6 @@
 {
-  "name": "Stock Take",
-  "short_name": "stock",
+  "name": "New Stock",
+  "short_name": "newStock",
   "lang": "en-GB",
   "icons": [{
     "src": "images/calculator1600.png",
@@ -20,7 +20,7 @@
     "sizes": "192x192"
   }],
   "background_color": "#b3ffff",
-  "start_url": "https://flow-randd.github.io/stockTake/",
+  "start_url": "https://flow-randd.github.io/newStock/",
   "display": "fullscreen",
   "theme_color": "#b3ffff"
 }
