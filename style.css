@@ -19,10 +19,10 @@ h5 {
         overflow:auto;
         position: relative;
         background: #FFFFFF; /* For browsers that do not support gradients */
-        background: -webkit-linear-gradient(rgba(179,255,255,1), white);
-        background: -moz-linear-gradient(rgba(179,255,255,1), white);
-        background: -o-linear-gradient(rgba(179,255,255,1), white);
-        background: linear-gradient(rgba(179,255,255,1), white 70%);
+        background: -webkit-linear-gradient(#b80707,rgba(179,255,255,1));
+        background: -moz-linear-gradient(#b80707, rgba(179,255,255,1));
+        background: -o-linear-gradient(#b80707, rgba(179,255,255,1));
+        background: linear-gradient(#b80707 25%, rgba(179,255,255,1));
       }
       #div1 {  
         border-radius: 25px;
