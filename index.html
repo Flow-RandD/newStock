@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+	  	<meta name="mobile-web-app-capable" content="yes">
+	  	<meta name="apple-mobile-web-app-capable" content="yes">
+	  	<meta name="application-name" content="calUP">
+	  	<meta name="apple-mobile-web-app-title" content="sorUP">
+	  	<meta name="theme-color" content="#b3ffff">
+	  	<meta name="msapplication-navbutton-color" content="#ffff00">
+	  	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	  	<meta name="msapplication-starturl" content="https://flow-randd.github.io/calendarUpdate/">
+	  	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	  
+	  	<base target="_top">
+	  
+	  	<title>Stock Update</title>
+	  
+	  	<link rel="manifest" href="manifest.json">
+	  	<link rel="stylesheet" href="https://ssl.gstatic.com/docs/script/css/add-ons1.css">
+	  	<link rel="stylesheet" href="style.css" type="text/css">
+	  	<link href='https://fonts.googleapis.com/css?family=Advent Pro' rel='stylesheet'>    
+    
+  		<img src="https://flow-randd.github.io/calendarUpdate/images/Flowstore_Logo_CUT OUT_v1.png" alt="FLOWSTORE SYSTEMS LTD.">
+  	</head>
+
+  <body>
+  <!--bodyInner-->  
+  <header><marquee><h3>Stock Take</h3></marquee></header>
+    <div id="div1">
+	    <h5>Please complete the form</h5>
+	      <form class="scroll" name="formA">
+	          <label id="locationLB">Location:</label><br>
+	          	<input type="text" id="location" name="location" placeholder="G01A01.." style="width:50%" autocomplete="off"><br><br>
+	          <label id="ptNumLB">GS-ACE Part Number:</label><br>
+	          	<input type="text" id="ptNum" name="ptNum" placeholder="Scan the box Part No..." style="width:50%" onchange="validatorGS()" autocomplete="off"><br><br>
+	          <label id="stockCdLB">Flowstore Stock Code:</label><br>
+	          	<input type="text" id="stockCd" name="stockCd" placeholder="Scan our Stock Code.." style="width:50%" onchange="validatorFS()" autocomplete="off"><br><br>
+	          <div class="radios">
+	            <label id="unitOfMeasureLB">Unit of Measure:</label><br>
+	            	<input type="radio" id="unitOfMeasure" name="unitOfMeasure" value="metre">Metre<br>
+	            	<input type="radio" id="unitOfMeasure" name="unitOfMeasure" value="each">Each<br><br>
+	          </div>
+	          <label id="notesLB">Notes:</label><br>
+	          	<input type="text" id="notes" name="notes" placeholder="Notes, if needed.." style="width:50%" autocomplete="off"><br><br>
+	      </form>
+	           
+      <div id="clickers">  
+        <!-- Post -->
+        <button class="action" type="submit" id="submit-form" onclick="postToAppsScript()">Submit</button>
+        <!-- Clear -->
+        <button class="Close" onclick="uncheckAll()">Clear</button><p><br><p>
+      </div>
+    </div>
+    
+    <div style="padding-bottom:250px"></div>
+    <div class="sticky">Generic terms and conditions</div>
+      
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="myscripts.js"></script>
