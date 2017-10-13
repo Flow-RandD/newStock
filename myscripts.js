@@ -1,4 +1,4 @@
-      var radios = document.formA.unitOfMeasure;
+    var radios = document.formA.unitOfMeasure;
         for(var i = 0, max = radios.length; i < max; i++) {
           radios[i].onclick = function() {
             if (this.value=="metre"){
@@ -9,7 +9,7 @@
           }
         }
     
-      $('#qty').on('focus', function() {
+      $('#boxQty').on('focus', function() {
         $('html,body').animate({
                 scrollTop: 100,
                 scrollLeft: 0
@@ -79,22 +79,19 @@
       
       $.ajax({
         url:"https://script.google.com/macros/s/AKfycbwPdoySksRkZCnJUw2DrD0fZer5k43D-D_Sc90v6tvr1dgaITYZ/exec",data:
-        {"location":location,"ptNum":ptNum,"stockCd":stockCd,"unitOfMeasure":unitOfMeasure,"notes":notes}, 
+        {"location":location,"ptNum":ptNum,"stockCd":stockCd,"unitOfMeasure":unitOfMeasure, "qty":qty,"notes":notes}, 
         type:"POST",dataType:"json",statusCode:
         {0:function(){
-            alert("Stock Updated!");
+            alert("Stock Record Created!");
             $('input[name="unitOfMeasure"]:checked').prop('checked',false);
-            $('input[name="ptNum"], textarea').val('');
-            $('input[name="stockCd"], textarea').val('');
-            $('input[name="qty"], textarea').val('');
-            $('input[name="notes"], textarea').val('');
+            $('input[type="text"], textarea').val('');
               $('html,body').animate({
                   scrollTop: 0,
                   scrollLeft: 0
                 }, 400, function(){
                 $('html,body').clearQueue();
               });
-            document.getElementById("ptNum").focus();
+            document.getElementById("location").focus();
           }
         }
       });
