@@ -9,7 +9,7 @@
           }
         }
     
-      $('#boxQty').on('focus', function() {
+      $('#qty').on('focus', function() {
         $('html,body').animate({
                 scrollTop: 100,
                 scrollLeft: 0
@@ -85,6 +85,7 @@
             alert("Stock Record Created!");
             $('input[name="unitOfMeasure"]:checked').prop('checked',false);
             $('input[type="text"], textarea').val('');
+            $('input[type="number"], textarea').val('');
               $('html,body').animate({
                   scrollTop: 0,
                   scrollLeft: 0
@@ -100,4 +101,5 @@
     function uncheckAll(){
         $('input[name="unitOfMeasure"]:checked').prop('checked',false);
         $('input[type="text"], textarea').val('');
+        $('input[type="number"], textarea').val('');
     }
