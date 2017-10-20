@@ -49,8 +49,9 @@
         dataType:"json",
         }).done(function(res) {
           if (res==1){
-            $('#exampleModal').modal('show')
-			//alert("This code already exists in the database!");
+			$('.modal-header').text('Duplicate Alert');
+			$('.modal-body').text('This GS ACE code already exists in the database!');
+            $('#alertModal').modal('show')
           }else{
             //alert(res);
           }
@@ -73,7 +74,10 @@
           if (res==1){
             //alert(res);
           }else{
-            alert(res);
+			$('.modal-header').text('Duplicate Alert');
+			$('.modal-body').text(res);
+			$('#alertModal').modal('show')
+            //alert(res);
           }
         })
           .fail(function(e) {
@@ -94,7 +98,10 @@
         {"location":location,"ptNum":ptNum,"stockCd":stockCd,"unitOfMeasure":unitOfMeasure, "qty":qty,"notes":notes}, 
         type:"POST",dataType:"json",statusCode:
         {0:function(){
-            alert("Stock Record Created!");
+            $('.modal-header').text('Success');
+			$('.modal-body').text("Stock record created!");
+			$('#alertModal').modal('show')
+			//alert("Stock Record Created!");
             $('input[name="unitOfMeasure"]:checked').prop('checked',false);
             $('input[type="text"], textarea').val('');
             $('input[name="qty"], textarea').val('');
