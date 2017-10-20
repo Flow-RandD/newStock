@@ -49,7 +49,8 @@
         dataType:"json",
         }).done(function(res) {
           if (res==1){
-            alert("This code already exists in the database!");
+            $('#exampleModal').modal('show')
+			//alert("This code already exists in the database!");
           }else{
             //alert(res);
           }
