@@ -22,7 +22,7 @@
     
       $('#qty').on('focus', function() {
         $('html,body').animate({
-                scrollTop: 400,
+                scrollTop: 300,
                 scrollLeft: 0
             }, 400, function(){
                 $('html,body').clearQueue();
@@ -31,7 +31,7 @@
       
       $('#notes').on('focus', function() {
         $('html,body').animate({
-                scrollTop: 500,
+                scrollTop: 350,
                 scrollLeft: 0
             }, 400, function(){
                 $('html,body').clearQueue();
