@@ -1,6 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
+		<!-- Bootstrap required meta tags -->
+    	<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		
+		<!-- Meta tags for manifest -->
 	  	<meta name="mobile-web-app-capable" content="yes">
 	  	<meta name="apple-mobile-web-app-capable" content="yes">
 	  	<meta name="application-name" content="calUP">
@@ -9,55 +14,106 @@
 	  	<meta name="msapplication-navbutton-color" content="#ffff00">
 	  	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 	  	<meta name="msapplication-starturl" content="https://flow-randd.github.io/newStock/">
-	  	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	  	
 	  
 	  	<base target="_top">
 	  
 	  	<title>Stock Update</title>
 	  
 	  	<link rel="manifest" href="manifest.json">
-	  	<link rel="stylesheet" href="https://ssl.gstatic.com/docs/script/css/add-ons1.css">
-	  	<link rel="stylesheet" href="style.css" type="text/css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+	  	<!--link rel="stylesheet" href="style.css" type="text/css"-->
 	  	<link href='https://fonts.googleapis.com/css?family=Advent Pro' rel='stylesheet'>    
     
-  		<img src="https://flow-randd.github.io/calendarUpdate/images/Flowstore_Logo_CUT OUT_v1.png" alt="FLOWSTORE SYSTEMS LTD.">
+  		<img class="container-fluid" src="https://flow-randd.github.io/calendarUpdate/images/Flowstore_Logo_CUT OUT_v1.png" alt="FLOWSTORE SYSTEMS LTD.">
   	</head>
-
-  <body>
-  <!--bodyInner-->  
-  <header><marquee><h3>New Stock</h3></marquee></header>
-    <div id="div1">
-	    <h5>Please complete the form</h5>
-	      <form class="scroll" name="formA">
-	          <label id="locationLB">Location:</label><br>
-	          	<input type="text" id="location" name="location" placeholder="G01A01.." style="width:50%" autocomplete="off"><br><br>
-	          <label id="ptNumLB">GS-ACE Part Number:</label><br>
-	          	<input type="text" id="ptNum" name="ptNum" placeholder="Scan the box Part No..." style="width:50%" onchange="validatorGS()" autocomplete="off"><br><br>
-	          <label id="stockCdLB">Flowstore Stock Code:</label><br>
-	          	<input type="text" id="stockCd" name="stockCd" placeholder="Scan our Stock Code.." style="width:50%" onchange="validatorFS()" autocomplete="off"><br><br>
-	          <div class="radios">
-	            <label id="unitOfMeasureLB">Unit of Measure:</label><br>
-	            	<input type="radio" id="unitOfMeasure" name="unitOfMeasure" value="metre">Metre<br>
-	            	<input type="radio" id="unitOfMeasure" name="unitOfMeasure" value="each">Each<br><br>
-	          </div>
-			  <label id="qtyLB">Box Qauntity:</label><br>
-	          	<input type="number" id="qty" name="qty" placeholder="250.." style="width:50%" autocomplete="off"><br><br>
-	          <label id="notesLB">Notes:</label><br>
-	          	<input type="text" id="notes" name="notes" placeholder="Notes, if needed.." style="width:50%" autocomplete="off"><br><br>
-	      </form>
-	           
-      <div id="clickers">  
-        <!-- Post -->
-        <button class="action" type="submit" id="submit-form" onclick="postToAppsScript()">Submit</button>
-        <!-- Clear -->
-        <button class="Close" onclick="uncheckAll()">Clear</button><p><br><p>
-      </div>
-    </div>
+	
+	<body>
+  	<!--bodyInner-->  
+	<header><marquee><h3>New Stock</h3></marquee></header>
+	    <div class="container-fluid" id="div1">
+			<h5>Please complete the form</h5>
+			<form name="formA">
+						<div class="form-group">
+		          			<label class="font-weight-bold" id="locationLB">Location:</label>
+		          			<input type="text" class="form-control" id="location" name="location" placeholder="G01A01.." style="width:100%" autocomplete="off">
+						</div>
+			  	<div class="form-row">
+				  	<div class="col-md-6">
+						<div class="form-group">
+		          			<label class="font-weight-bold" id="ptNumLB">GS-ACE Part Number:</label>
+		          			<input type="text" class="form-control" id="ptNum" name="ptNum" placeholder="Scan the box Part No..." style="width:100%" onchange="validatorGS()" autocomplete="off">
+				  		</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+		          			<label class="font-weight-bold" id="stockCdLB">Flowstore Stock Code:</label>
+		          			<input type="text" class="form-control" id="stockCd" name="stockCd" placeholder="Scan our Stock Code.." style="width:100%" onchange="validatorFS()" autocomplete="off">
+				  		</div>
+					</div>
+		      	</div>
+					<label class="font-weight-bold" id="unitOfMeasureLB">Unit of Measure:</label>
+						<div class="form-check">
+			        		<label class="form-check-label">
+			            		<input class="form-check-input" type="radio" id="unitOfMeasure" name="unitOfMeasure" value="metre">
+								Metre
+							</label>
+						</div>
+						<div class="form-check">
+			        		<label class="form-check-label">
+			            		<input class="form-check-input" type="radio" id="unitOfMeasure" name="unitOfMeasure" value="each">
+								Each
+							</label>
+			        	</div>
+						<div class="form-group">
+							<label class="font-weight-bold" id="qtyLB">Box Qauntity:</label>
+		          			<input type="number" class="form-control" id="qty" name="qty" placeholder="250.." style="width:100%" autocomplete="off">
+						</div>
+						<div class="form-group">
+		          			<label class="font-weight-bold" id="notesLB">Notes:</label>
+		          			<input type="text" class="form-control" id="notes" name="notes" placeholder="Notes, if needed.." style="width:100%" autocomplete="off">
+						</div>
+			</form>
+			
+			<!-- Modal -->
+			<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			  <div class="modal-dialog" role="document">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			          <span aria-hidden="true">&times;</span>
+			        </button>
+			      </div>
+			      <div class="modal-body">
+			        ...
+			      </div>
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+			        <button type="button" class="btn btn-primary">Save changes</button>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+		           
+	      	<div id="clickers">  
+	        	<!-- Post -->
+	        	<button class="btn btn-info" type="submit" id="submit-form" onclick="postToAppsScript()">Submit</button>
+	        	<!-- Clear -->
+	        	<button class="btn btn-light" onclick="uncheckAll()">Clear</button><p><br><p>
+	      	</div>
+	    </div>
+	    
+	    <div style="padding-bottom:250px"></div>
+	    <div class="sticky">Generic terms and conditions</div>
     
-    <div style="padding-bottom:250px"></div>
-    <div class="sticky">Generic terms and conditions</div>
-      
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="myscripts.js"></script>
+		<!--general scripts-->  
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	    <script src="https://apis.google.com/js/platform.js" async defer></script>
+		<script src="myscripts.js"></script>
+		<!--Bootstrap scripts-->
+	    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    
+	</body>
