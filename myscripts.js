@@ -41,6 +41,8 @@
     function validatorGS(){
       var code = "validatorGS";
       var stockCd = $('#ptNum').val();
+	    	var stockCd = stockCdSRC.replace(/-/g,"");
+  		stockCd = stockCd.replace(/ /g,"");
       
       $.ajax({
         url:"https://script.google.com/macros/s/AKfycbwPdoySksRkZCnJUw2DrD0fZer5k43D-D_Sc90v6tvr1dgaITYZ/exec",data:
@@ -64,6 +66,8 @@
     function validatorFS(){
       var code = "validatorFS";
       var stockCd = $('#stockCd').val();
+	    	var stockCd = stockCdSRC.replace(/-/g,"");
+  		stockCd = stockCd.replace(/ /g,"");
       
       $.ajax({
         url:"https://script.google.com/macros/s/AKfycbwPdoySksRkZCnJUw2DrD0fZer5k43D-D_Sc90v6tvr1dgaITYZ/exec",data:
