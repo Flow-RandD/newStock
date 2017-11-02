@@ -19,6 +19,32 @@
         }
     });
     
+	$('#location').on('focus', function() {
+         $('html,body').animate({
+                scrollTop: 250,
+                scrollLeft: 0
+            }, 400, function(){
+                $('html,body').clearQueue();
+            });
+      	});
+		
+	$('#ptNum').on('focus', function() {
+         $('html,body').animate({
+                scrollTop: 300,
+                scrollLeft: 0
+            }, 400, function(){
+                $('html,body').clearQueue();
+            });
+      	});
+		
+	$('#stockCd').on('focus', function() {
+         $('html,body').animate({
+                scrollTop: 350,
+                scrollLeft: 0
+            }, 400, function(){
+                $('html,body').clearQueue();
+            });
+      	});
     
       $('#qty').on('focus', function() {
         $('html,body').animate({
@@ -37,6 +63,7 @@
                 $('html,body').clearQueue();
             });
       });
+      
       
     function validatorGS(){
       var code = "validatorGS";
