@@ -43,6 +43,7 @@
       var stockCdSRC = $('#ptNum').val();
 	  	var stockCd = stockCdSRC.replace(/-/g,"");
 		stockCd = stockCd.replace(/ /g,"");
+	    	stockCd = stockCd.toUpperCase();
       
       $.ajax({
         url:"https://script.google.com/macros/s/AKfycbwPdoySksRkZCnJUw2DrD0fZer5k43D-D_Sc90v6tvr1dgaITYZ/exec",data:
@@ -68,6 +69,7 @@
       var stockCdSRC = $('#stockCd').val();
 		var stockCd = stockCdSRC.replace(/-/g,"");
   		stockCd = stockCd.replace(/ /g,"");
+	    	stockCd = stockCd.toUpperCase();
       
       $.ajax({
         url:"https://script.google.com/macros/s/AKfycbwPdoySksRkZCnJUw2DrD0fZer5k43D-D_Sc90v6tvr1dgaITYZ/exec",data:
