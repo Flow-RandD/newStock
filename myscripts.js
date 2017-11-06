@@ -123,11 +123,14 @@
 
      function postToAppsScript(){      
       var location =$('#location').val();
-      var ptNum = $('#ptNum').val();
+      var ptNumSRC = $('#ptNum').val();
       var stockCd = $('#stockCd').val();
       var unitOfMeasure = $('input[name="unitOfMeasure"]:checked').val() + " " + result;
       var qty = $('#qty').val();
       var notes = $('#notes').val();
+	var ptNum = ptNumSRC.replace(/-/g,"");
+  	ptNum = ptNum.replace(/ /g,"");
+	ptNum = ptNum.toUpperCase();
       
       $.ajax({
         url:"https://script.google.com/macros/s/AKfycbwPdoySksRkZCnJUw2DrD0fZer5k43D-D_Sc90v6tvr1dgaITYZ/exec",data:
